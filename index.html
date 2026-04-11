@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE EdSoc | Capítulo Estudiantil</title>
+  <meta
+    name="description"
+    content="Landing page informativa del capítulo estudiantil IEEE Education Society con información sobre el capítulo, áreas, proyectos, directiva, voluntariado y contacto."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body id="top">
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand">
+        <img src="img/ieee_peru_edsoc_rgb_w.png" class="logo-dark" alt="EdSoc Logo">
+        <img src="img/ieee_peru_edsoc_rgb_c.png" class="logo-light" alt="EdSoc Logo">
+
+        <div>
+          <strong>EdSoc</strong>
+          <small>Capítulo Estudiantil</small>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#novedades">Novedades</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#directiva">Directiva</a>
+        <a href="#voluntariado">Voluntariado</a>
+        <a href="#contacto">Contacto</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+          <span class="theme-icon theme-sun">☀</span>
+          <span class="theme-icon theme-moon">☾</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">IEEE Education Society</span>
+          <h1>Impulsamos una <span>educación</span> más innovadora, moderna y colaborativa.</h1>
+          <p>
+            IEEE EdSoc es un capítulo estudiantil orientado a mejorar el aprendizaje mediante metodologías
+             innovadoras, herramientas tecnológicas, investigación educativa y actividades académicas que
+             fortalecen la formación integral de los estudiantes.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#eventos">Ver próximos eventos</a>
+            <a class="btn btn-secondary" href="#voluntariado">Unirme al equipo</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal reveal-delay-1">
+          <img
+            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80"
+            alt="Estudiantes colaborando"
+          />
+          <div class="hero-card floating-card card-glass">
+            <strong>Comunidad EdSoc</strong>
+            <p>Investigación, eventos, proyectos y crecimiento continuo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container stats-grid reveal reveal-delay-2">
+        <article class="stat-card">
+          <strong>35+</strong>
+          <span>Miembros activos</span>
+        </article>
+        <article class="stat-card">
+          <strong>3</strong>
+          <span>Proyectos realizados</span>
+        </article>
+        <article class="stat-card">
+          <strong>2</strong>
+          <span>Eventos</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="novedades">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Novedades</span>
+          <h2>Lo más reciente del capítulo</h2>
+          <p>
+            Mantente al tanto de convocatorias, actividades, avances de proyectos y oportunidades
+            para formar parte de IEEE EdSoc.
+          </p>
+        </div>
+
+        <div class="carousel reveal reveal-delay-1" id="newsCarousel">
+          <button class="carousel-btn prev" id="prevSlide" aria-label="Anterior">‹</button>
+
+          <div class="carousel-track" id="carouselTrack">
+            <article
+              class="slide is-active"
+              style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')"                    >
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="tag">Convocatoria</span>
+                <h3>Postulación a voluntariado y áreas del capítulo</h3>
+                <p>
+                    Próximamente abriremos postulaciones para las áreas del capítulo.
+                    Podrás participar en proyectos, eventos, difusión y organización
+                    interna del IEEE EdSoc.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="slide"
+              style="background-image:url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6')"            >
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="tag">Proyecto</span>
+                <h3>Landing Page de IEEE EdSoc</h3>
+                <p>
+                    Estamos desarrollando una página web para dar visibilidad al capítulo,
+                    mostrar nuestras áreas, proyectos, eventos y convocatorias de forma
+                    clara y accesible.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="slide"
+              style="background-image:url('https://electrodomesticos10.top/imagenes/las-10-mejores-impresoras-3d.jpg')"            >
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="tag">Evento</span>
+                <h3>Taller de Impresión 3D</h3>
+                <p>
+                  <p>
+                      Próximamente realizaremos un taller de impresión 3D enfocado en el
+                      aprendizaje práctico mediante tecnologías de fabricación y prototipado.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="slide"
+              style="background-image:url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80')"            >
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="tag">Proyecto</span>
+                <h3>Brazo Robótico</h3>
+                <p>
+                    Iniciamos el desarrollo de un brazo robótico como proyecto del capítulo.
+                    Próximamente compartiremos avances y aplicaciones del prototipo.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-btn next" id="nextSlide" aria-label="Siguiente">›</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-bg" id="eventos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Eventos y ponencias</span>
+          <h2>Actividades para aprender, compartir y crecer</h2>
+          <p>
+            El capítulo organiza talleres, ponencias, eventos académicos y espacios de intercambio
+            que fortalecen la formación integral de los estudiantes.
+          </p>
+        </div>
+
+        <div class="cards-grid cards-grid-lg">
+          <article class="event-card reveal">
+            <img
+              src="https://ivisualformacion.com/wp-content/uploads/2023/07/modelado-3d-hard-surface-edited.jpg"
+              alt="Taller educativo"
+            />
+            <div class="card-body">
+              <span class="pill">Talleres</span>
+              <h3>Taller de Impresión 3D</h3>
+              <p>
+                  Espacios dirigidos a aprender modelado 3D y fabricación digital. 
+                  Los participantes podrán diseñar sus propios modelos y los más 
+                  interesantes serán seleccionados para ser impresos en 3D.
+              </p>
+              <ul class="meta-list">
+                <li>Formato presencial</li>
+                <li></li>
+                <li>Enfocado en estudiantes</li>
+              </ul>
+            </div>
+          </article>
+
+        <div class="history-box reveal reveal-delay-1">
+          <div>
+            <h3>Historial de eventos</h3>
+            <p>
+              Aquí podrás ver el registro de talleres, ponencias y actividades ya realizadas
+              para mostrar la trayectoria y participación del capítulo.
+            </p>
+          </div>
+          <div class="history-tags">
+            <span>Proximamente...</span>
+            <span>Proximamente...</span>
+            <span>Proximamente...</span>
+            <span>Proximamente...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Proyectos e investigación</span>
+          <h2>Propuestas que conectan educación, innovación y tecnología</h2>
+          <p>
+            El área de proyectos e investigación se encarga de proponer, desarrollar y presentar
+            iniciativas académicas con valor formativo y proyección real.
+          </p>
+        </div>
+
+        <div class="project-feature reveal">
+          <div class="project-feature-media">
+            <img
+              src="https://images.unsplash.com/photo-1640552421163-5a8e34827550?auto=format&fit=crop&w=1200&q=80"
+              alt="Proyecto landing page"
+            />
+          </div>
+          <div class="project-feature-copy">
+            <span class="pill pill-success">Proyecto principal</span>
+            <h3>Landing Page informativa del capítulo</h3>
+            <p>
+              Creación de una página web para facilitar la toma de información de las personas
+              interesadas y mantenerlas al tanto de las áreas del capítulo, proyectos en trabajo,
+              eventos, postulaciones a voluntariado e información de los integrantes.
+            </p>
+            <div class="progress-bar">
+              <span style="width: 45%"></span>
+            </div>
+            <ul class="meta-list compact">
+              <li>Objetivo: Dar visibilidad al capítulo</li>
+              <li>Enfoque: Centro de información y convocatoria de nuevos miembros</li>
+              <li>Uso: Estudiantes interesados y miembros</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cards-grid projects-grid">
+          <article class="info-card reveal">
+            <h3>Landing Page</h3>
+            <p>
+              Plataforma web orientada a mostrar las áreas, eventos, proyectos, convocatorias y
+              datos generales del capítulo estudiantil.
+            </p>
+            <span class="small-label">Web · Difusión · Información</span>
+          </article>
+
+          <article class="info-card reveal reveal-delay-2">
+            <h3>Taller de impresión 3D</h3>
+            <p>
+              Iniciativa orientada a fortalecer el aprendizaje práctico mediante tecnologías de
+              fabricación y prototipado.
+            </p>
+            <span class="small-label">Impresión 3D · Taller</span>
+          </article>
+
+            <article class="info-card reveal reveal-delay-1">
+            <h3>Brazo robótico</h3>
+            <p>
+              Creación de un brazo robótico como proyecto en desarrollo, pendiente de definir con
+              mayor precisión la acción específica que realizará.
+            </p>
+            <span class="small-label">Robótica · Desarrollo</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-bg" id="directiva">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Directiva y áreas</span>
+          <h2>Estructura organizativa del capítulo</h2>
+          <p>
+            Estas son las áreas principales que impulsan el funcionamiento del capítulo. Puedes
+            completar luego con nombres, apellidos y carreras de cada integrante.
+          </p>
+        </div>
+
+        <div class="cards-grid team-grid">
+          <article class="team-card reveal">
+            <div class="avatar">M</div>
+            <h3>Marketing y Publicidad</h3>
+            <p>
+              Gestiona redes sociales, contenido digital, piezas gráficas, identidad visual y
+              difusión de talleres, charlas y convocatorias.
+            </p>
+            <span class="small-label">Colíderes: Claudia de la Cruz, Guillermo Guillen y James Mamani</span>
+          </article>
+
+          <article class="team-card reveal reveal-delay-1">
+            <div class="avatar">E</div>
+            <h3>Eventos y Logística</h3>
+            <p>
+              Planifica, organiza y ejecuta eventos en todas sus etapas: antes, durante y después,
+              coordinando cronogramas, dinámicas y seguimiento.
+            </p>
+            <span class="small-label">Colíderes: Alejandro Castillo, Alvaro Dominguez y Fátima Tamayo</span>
+          </article>
+
+          <article class="team-card reveal reveal-delay-2">
+            <div class="avatar">R</div>
+            <h3>Recursos Humanos</h3>
+            <p>
+              Gestiona convocatorias, integración del equipo, reuniones, seguimiento de miembros
+              activos y apoyo en la resolución de conflictos.
+            </p>
+            <span class="small-label">Colíder: Mario Cabrera</span>
+          </article>
+
+          <article class="team-card reveal">
+            <div class="avatar">P</div>
+            <h3>Proyectos e Investigación</h3>
+            <p>
+              Propone y desarrolla proyectos académicos, coordina planes de trabajo, redacta informes
+              técnicos y presenta resultados obtenidos.
+            </p>
+            <span class="small-label">Colíderes: Guillermo Mendoza, Fabiana Bello, Rafael Obregón y Leonardo Calderón</span>
+          </article>
+
+          <article class="team-card reveal reveal-delay-1">
+            <div class="avatar">RP</div>
+            <h3>Relaciones Públicas</h3>
+            <p>
+              Gestiona alianzas con otras organizaciones, coordina con ponentes e invitados y apoya
+              en la búsqueda de beneficios y oportunidades para el capítulo.
+            </p>
+            <span class="small-label">Colíder: Brandon Carcausto</span>
+          </article>
+
+          <article class="team-card reveal reveal-delay-2">
+            <div class="avatar">DG</div>
+            <h3>Directiva General</h3>
+            <p>
+              Organización principal encargada de articular las áreas y sostener el funcionamiento
+              global del capítulo.
+            </p>
+            <span class="small-label">Ale(Marketing) · Rodrigo(Recursos Humanos) · Giancarlo(Proyectos) · Juan Pablo(Eventos) · Carolina(Relaciones Públicas)</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="voluntariado">
+      <div class="container two-col">
+        <div class="reveal">
+          <span class="eyebrow">Voluntariado</span>
+          <h2>Únete y aporta desde el área que más te motive</h2>
+          <p>
+            El capítulo busca estudiantes con interés en educación, tecnología, organización,
+            investigación, difusión y trabajo en equipo. Aquí podrás crecer mientras participas
+            en actividades con impacto académico y formativo.
+          </p>
+
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <h3>Aprendizaje real</h3>
+              <p>Participa en iniciativas aplicadas vinculadas a educación, innovación y tecnología.</p>
+            </article>
+
+            <article class="benefit-card">
+              <h3>Trabajo en equipo</h3>
+              <p>Fortalece habilidades blandas como comunicación, liderazgo y colaboración.</p>
+            </article>
+
+            <article class="benefit-card">
+              <h3>Experiencia visible</h3>
+              <p>Forma parte de proyectos, eventos y actividades que enriquecen tu perfil.</p>
+            </article>
+
+            <article class="benefit-card">
+              <h3>Comunidad</h3>
+              <p>Conecta con estudiantes y profesionales en un entorno de crecimiento continuo.</p>
+            </article>
+          </div>
+        </div>
+
+        <form class="join-form reveal reveal-delay-1" id="joinForm">
+          <h3>Formulario de interés</h3>
+
+          <label>
+            Nombre completo
+            <input type="text" placeholder="Tu nombre completo" required />
+          </label>
+
+          <label>
+            Correo institucional o personal
+            <input type="email" placeholder="tucorreo@ejemplo.com" required />
+          </label>
+
+          <label>
+            Área de interés
+            <select required>
+              <option value="">Selecciona una opción</option>
+              <option>Marketing y Publicidad</option>
+              <option>Eventos y Logística</option>
+              <option>Recursos Humanos</option>
+              <option>Proyectos e Investigación</option>
+              <option>Relaciones Públicas</option>
+            </select>
+          </label>
+
+          <label>
+            Cuéntanos cómo te gustaría aportar
+            <textarea rows="4" placeholder="Me gustaría participar en..."></textarea>
+          </label>
+
+          <button class="btn btn-primary btn-full" type="submit">Enviar interés</button>
+          <p class="form-note" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+
+      <tion class="section alt-bg" id="contacto">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2>Conecta con el capítulo</h2>
+        <p>
+          Esta sección está pensada para que cualquier estudiante interesado pueda conocer más
+          del capítulo, escribirles fácilmente y estar pendiente de nuevas oportunidades.
+        </p>
+
+        <div class="contact-list">
+          <a href="https://www.instagram.com/ieeeeducationsocietyupc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram · @ieeeeducationsocietyupc</a>
+          <a href="https://www.linkedin.com/company/ieeedsoc?trk=public_post_feed-actor-name" target="_blank">LinkedIn · IEEE Education Society UPC</a>
+          <span class="contact-item">Lima, Perú</span>
+        </div>
+      </div>
+
+      <div class="contact-panel reveal reveal-delay-1">
+        <h3>Información rápida</h3>
+        <div class="mini-panels">
+          <article>
+            <strong>Qué es EdSoc</strong>
+            <p>Capítulo orientado a mejorar la educación en ingeniería y tecnología.</p>
+          </article>
+          <article>
+            <strong>Áreas activas</strong>
+            <p>Marketing, eventos, recursos humanos, proyectos y relaciones públicas.</p>
+          </article>
+          <article class="wide">
+            <strong>Investigación y Ponencias</strong>
+            <p>
+              Proyectos de investigación y ponencias que realizamos mensualmente
+              para compartir conocimiento, desarrollar nuevas ideas y fortalecer
+              la comunidad académica.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div style="height: 80px;"></div>
+
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>IEEE Education Society UPC</strong>
+        <p>Capítulo estudiantil orientado a la innovación educativa y el crecimiento colaborativo.</p>
+      </div>
+      <a href="#top" class="back-top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
