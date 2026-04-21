@@ -10,7 +10,10 @@ if (savedTheme === 'dark') body.classList.add('dark');
 
 themeToggle?.addEventListener('click', () => {
   body.classList.toggle('dark');
-  localStorage.setItem('ieeeedsoc-theme', body.classList.contains('dark') ? 'dark' : 'light');
+  localStorage.setItem(
+    'ieeeedsoc-theme',
+    body.classList.contains('dark') ? 'dark' : 'light'
+  );
 });
 
 menuToggle?.addEventListener('click', () => nav.classList.toggle('open'));
@@ -28,6 +31,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
+
 reveals.forEach(item => revealObserver.observe(item));
 
 const track = document.getElementById('carouselTrack');
@@ -35,8 +39,12 @@ const slides = Array.from(document.querySelectorAll('.slide'));
 const prevBtn = document.getElementById('prevSlide');
 const nextBtn = document.getElementById('nextSlide');
 const dotsWrap = document.getElementById('carouselDots');
+
 let currentIndex = 0;
 let autoplay;
+let startX = 0;
+let endX = 0;
+let isSwiping = false;
 
 function buildDots() {
   slides.forEach((_, index) => {
@@ -50,9 +58,11 @@ function buildDots() {
 
 function updateCarousel() {
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
   slides.forEach((slide, index) => {
     slide.classList.toggle('is-active', index === currentIndex);
   });
+
   [...dotsWrap.children].forEach((dot, index) => {
     dot.classList.toggle('active', index === currentIndex);
   });
@@ -63,8 +73,13 @@ function goToSlide(index) {
   updateCarousel();
 }
 
-function nextSlide() { goToSlide(currentIndex + 1); }
-function prevSlide() { goToSlide(currentIndex - 1); }
+function nextSlide() {
+  goToSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  goToSlide(currentIndex - 1);
+}
 
 function startAutoplay() {
   stopAutoplay();
@@ -75,14 +90,52 @@ function stopAutoplay() {
   if (autoplay) clearInterval(autoplay);
 }
 
+function handleTouchStart(e) {
+  startX = e.touches[0].clientX;
+  endX = startX;
+  isSwiping = true;
+  stopAutoplay();
+}
+
+function handleTouchMove(e) {
+  if (!isSwiping) return;
+  endX = e.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+  if (!isSwiping) return;
+
+  const diffX = startX - endX;
+  const minSwipeDistance = 50;
+
+  if (Math.abs(diffX) > minSwipeDistance) {
+    if (diffX > 0) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  }
+
+  isSwiping = false;
+  startAutoplay();
+}
+
 if (track && slides.length) {
   buildDots();
   updateCarousel();
   startAutoplay();
+
   nextBtn?.addEventListener('click', nextSlide);
   prevBtn?.addEventListener('click', prevSlide);
-  track.closest('.carousel')?.addEventListener('mouseenter', stopAutoplay);
-  track.closest('.carousel')?.addEventListener('mouseleave', startAutoplay);
+
+  const carousel = track.closest('.carousel');
+
+  carousel?.addEventListener('mouseenter', stopAutoplay);
+  carousel?.addEventListener('mouseleave', startAutoplay);
+
+  carousel?.addEventListener('touchstart', handleTouchStart, { passive: true });
+  carousel?.addEventListener('touchmove', handleTouchMove, { passive: true });
+  carousel?.addEventListener('touchend', handleTouchEnd);
 }
 
 joinForm?.addEventListener('submit', (event) => {
