@@ -42,6 +42,7 @@
         <a href="#eventos">Eventos</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#directiva">Directiva</a>
+        <a href="#alianzas">Alianzas</a>
         <a href="#voluntariado">Voluntariado</a>
         <a href="#contacto">Contacto</a>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
@@ -240,7 +241,7 @@
           </p>
         </div>
 
-        <div class="project-feature reveal">
+        <div class="project-feature reveal" id="projectFeature">
           <div class="project-feature-media">
             <img
               src="https://www.hostingplus.com.es/wp-content/uploads/2020/04/crear-web.jpg"
@@ -266,15 +267,7 @@
           </div>
         </div>
 
-        <div class="cards-grid projects-grid">
-          <article class="info-card reveal">
-            <h3>Landing Page</h3>
-            <p>
-              Plataforma web orientada a mostrar las áreas, eventos, proyectos, convocatorias y
-              datos generales del capítulo estudiantil.
-            </p>
-            <span class="small-label">Web · Difusión · Información</span>
-          </article>
+        <div class="cards-grid projects-grid" id="projectsGrid">
 
           <article class="info-card reveal reveal-delay-2">
             <h3>Taller de impresión 3D</h3>
@@ -283,6 +276,9 @@
               fabricación y prototipado.
             </p>
             <span class="small-label">Impresión 3D · Taller</span>
+            <div class="progress-bar">
+              <span style="width: 50%"></span>
+            </div>
           </article>
 
             <article class="info-card reveal reveal-delay-1">
@@ -292,6 +288,9 @@
               mayor precisión la acción específica que realizará.
             </p>
             <span class="small-label">Robótica · Desarrollo</span>
+            <div class="progress-bar">
+              <span style="width: 50%"></span>
+            </div>
           </article>
 
         </div>
@@ -316,7 +315,7 @@
               Gestiona redes sociales, contenido digital, piezas gráficas, identidad visual y
               difusión de talleres, charlas y convocatorias.
             </p>
-            <a href="areas.html" class="btn-area">Más información</a>
+            <a href="areas.html#marketing-publicidad" class="btn-area">Más información</a>
           </article>
 
           <article class="team-card reveal reveal-delay-1">
@@ -325,7 +324,7 @@
               Planifica, organiza y ejecuta eventos en todas sus etapas: antes, durante y después,
               coordinando cronogramas, dinámicas y seguimiento.
             </p>
-           <a href="areas.html" class="btn-area">Más información</a>
+           <a href="areas.html#eventos-logistica" class="btn-area">Más información</a>
           </article>
 
           <article class="team-card reveal reveal-delay-2">
@@ -334,7 +333,7 @@
               Gestiona convocatorias, integración del equipo, reuniones, seguimiento de miembros
               activos y apoyo en la resolución de conflictos.
             </p>
-           <a href="areas.html" class="btn-area">Más información</a>
+           <a href="areas.html#recursos-humanos" class="btn-area">Más información</a>
           </article>
 
           <article class="team-card reveal">
@@ -343,7 +342,7 @@
               Propone y desarrolla proyectos académicos, coordina planes de trabajo, redacta informes
               técnicos y presenta resultados obtenidos.
             </p>
-            <a href="areas.html" class="btn-area">Más información</a>
+            <a href="areas.html#proyectos-investigacion" class="btn-area">Más información</a>
           </article>
 
           <article class="team-card reveal reveal-delay-1">
@@ -352,7 +351,7 @@
               Gestiona alianzas con otras organizaciones, coordina con ponentes e invitados y apoya
               en la búsqueda de beneficios y oportunidades para el capítulo.
             </p>
-            <a href="areas.html" class="btn-area">Más información</a>
+            <a href="areas.html#relaciones-publicas" class="btn-area">Más información</a>
           </article>
 
           <article class="team-card reveal reveal-delay-2">
@@ -361,7 +360,204 @@
               Organización principal encargada de articular las áreas y sostener el funcionamiento
               global del capítulo.
             </p>
-            <a href="areas.html" class="btn-area">Más información</a>
+            <a href="areas.html#directiva-general" class="btn-area">Más información</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="alianzas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Alianzas</span>
+          <h2>Capítulos aliados para aprender y colaborar</h2>
+          <p>
+            Conectamos con comunidades estudiantiles que comparten intereses en programación,
+            electrónica, redes, robótica, liderazgo STEM y tecnología aplicada.
+          </p>
+        </div>
+
+        <div class="cards-grid alliances-grid">
+          <article class="alliance-card reveal">
+            <span class="small-label">OTROS</span>
+            <h3>Inspire to Creator</h3>
+            <p>Comunidad orientada a la programación de computadoras y al desarrollo de soluciones digitales.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de Inspire to Creator">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-1">
+            <span class="small-label">PUCP</span>
+            <h3>CS</h3>
+            <p>Capítulo enfocado en programación de computadoras, pensamiento computacional y desarrollo de software.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de CS PUCP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-2">
+            <span class="small-label">PUCP</span>
+            <h3>COMSOC</h3>
+            <p>Capítulo dedicado a redes, conexiones y tecnologías de comunicación para sistemas modernos.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de COMSOC PUCP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal">
+            <span class="small-label">UNMSM</span>
+            <h3>EDS</h3>
+            <p>Capítulo orientado a dispositivos electrónicos, circuitos y sistemas electrónicos aplicados.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de EDS UNMSM">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-1">
+            <span class="small-label">UNMSM</span>
+            <h3>CAS</h3>
+            <p>Capítulo centrado en circuitos y sistemas electrónicos para diseño, análisis e implementación.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de CAS UNMSM">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-2">
+            <span class="small-label">UNMSM</span>
+            <h3>RAS</h3>
+            <p>Capítulo de robótica y automatización, con interés en prototipos, control y sistemas inteligentes.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de RAS UNMSM">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal">
+            <span class="small-label">UTP</span>
+            <h3>WIE</h3>
+            <p>Grupo que impulsa la participación de mujeres en ingeniería, tecnología y comunidades STEM.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de WIE UTP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-1">
+            <span class="small-label">UPC</span>
+            <h3>AESS</h3>
+            <p>Capítulo enfocado en tecnología aeroespacial, exploración, sistemas y aplicaciones para el espacio.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de AESS UPC">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-2">
+            <span class="small-label">UPC</span>
+            <h3>COMSOC</h3>
+            <p>Capítulo dedicado a redes, conexiones y tecnologías de comunicación para entornos digitales.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de COMSOC UPC">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal">
+            <span class="small-label">UPC</span>
+            <h3>LEAD</h3>
+            <p>Grupo orientado al liderazgo STEM, la formación de equipos y el crecimiento de comunidades técnicas.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de LEAD UPC">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-1">
+            <span class="small-label">URP</span>
+            <h3>WIE</h3>
+            <p>Grupo que promueve mujeres en ingeniería mediante actividades, comunidad y oportunidades STEM.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de WIE URP">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal reveal-delay-2">
+            <span class="small-label">UTEC</span>
+            <h3>CS</h3>
+            <p>Capítulo enfocado en programación de computadoras, software y resolución de problemas con tecnología.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de CS UTEC">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
+          </article>
+
+          <article class="alliance-card reveal">
+            <span class="small-label">UTEC</span>
+            <h3>RAS</h3>
+            <p>Capítulo de robótica y automatización, orientado a sistemas autónomos, prototipos y control.</p>
+            <a href="#" class="instagram-link" aria-label="Instagram de RAS UTEC">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram
+            </a>
           </article>
         </div>
       </div>
