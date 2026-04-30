@@ -1,3 +1,6 @@
+/* =========================================================
+   TOKENS DE TEMA (colores, radios, sombras, medidas)
+   ========================================================= */
 :root {
   --bg: #f7f9fc;
   --surface: rgba(255, 255, 255, 0.82);
@@ -18,10 +21,12 @@
   --header-bg: rgba(247, 249, 252, 0.68);
 }
 
+/* Comportamiento global de scroll */
 html {
   scroll-behavior: smooth;
 }
 
+/* Variables del modo oscuro */
 body.dark {
   --bg: #08101f;
   --surface: rgba(10, 18, 35, 0.76);
@@ -38,6 +43,9 @@ body.dark {
   --header-bg: rgba(8, 16, 31, 0.72);
 }
 
+/* =========================================================
+   RESET Y BASE GLOBAL
+   ========================================================= */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -52,11 +60,13 @@ a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 
+/* Contenedor principal reutilizable */
 .container {
   width: min(var(--max-width), calc(100% - 2rem));
   margin: 0 auto;
 }
 
+/* Secciones base y fondo alterno */
 .section {
   padding: 5.5rem 0;
   position: relative;
@@ -65,6 +75,9 @@ button { cursor: pointer; }
 }
 .alt-bg { background: linear-gradient(180deg, transparent, rgba(71, 106, 181, 0.05), transparent); }
 
+/* =========================================================
+   HEADER Y NAVEGACION
+   ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -155,6 +168,9 @@ body.dark .theme-sun {
   border-radius: 999px;
 }
 
+/* =========================================================
+   LAYOUTS COMPARTIDOS (grids de dos columnas)
+   ========================================================= */
 .hero-grid,
 .two-col,
 .contact-grid {
@@ -164,6 +180,7 @@ body.dark .theme-sun {
   align-items: center;
 }
 
+/* Tipografia compartida para bloques principales */
 .hero h1,
 .section-head h2,
 .two-col h2,
@@ -179,6 +196,7 @@ body.dark .theme-sun {
 .two-col p,
 .contact-grid p { color: var(--muted); font-size: 1.05rem; }
 
+/* Badge superior tipo "eyebrow" */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -192,6 +210,7 @@ body.dark .theme-sun {
   margin-bottom: 1rem;
 }
 
+/* Grupo de acciones del hero */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -199,6 +218,9 @@ body.dark .theme-sun {
   margin-top: 2rem;
 }
 
+/* =========================================================
+   BOTONES Y CTAS GENERICOS
+   ========================================================= */
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -222,6 +244,7 @@ body.dark .theme-sun {
 }
 .btn-full { width: 100%; }
 
+/* Boton/CTA especifico para tarjetas de areas */
 .btn-area {
   display: inline-flex;
   align-items: center;
@@ -248,6 +271,9 @@ body.dark .theme-sun {
   transform: translateY(-2px);
 }
 
+/* =========================================================
+   HERO MEDIA (imagen principal y tarjeta flotante)
+   ========================================================= */
 .hero-media {
   position: relative;
 }
@@ -289,12 +315,15 @@ body.dark .card-glass {
   color: #fff;
 }
 
-/* MODO NOCHE */
+/* Asegura buen contraste del texto en modo noche */
 body.dark .floating-card strong,
 body.dark .floating-card p {
   color: #fff;
 }
 
+/* =========================================================
+   GRILLAS Y TARJETAS GENERICAS
+   ========================================================= */
 .stats-grid,
 .cards-grid,
 .benefits-grid,
@@ -373,6 +402,7 @@ body.dark .floating-card p {
 .stat-card strong { font-size: 2rem; display: block; margin-bottom: .2rem; }
 .stat-card span { color: var(--muted); }
 
+/* Encabezados de seccion */
 .section-head {
   max-width: 760px;
   margin-bottom: 2rem;
@@ -383,6 +413,9 @@ body.dark .floating-card p {
   text-align: center;
 }
 
+/* =========================================================
+   PAGINA DE AREAS (hero y anclas)
+   ========================================================= */
 .areas-hero {
   padding-top: 7rem;
 }
@@ -398,6 +431,9 @@ body.dark .floating-card p {
 .area-section {
   scroll-margin-top: 96px;
 }
+/* =========================================================
+   TARJETAS DE MIEMBROS
+   ========================================================= */
 .member-card {
   display: flex;
   min-height: 320px;
@@ -430,6 +466,9 @@ body.dark .floating-card p {
   color: var(--primary);
 }
 
+/* =========================================================
+   CARRUSEL (slides, controles, dots)
+   ========================================================= */
 .carousel {
   position: relative;
   overflow: hidden;
@@ -516,17 +555,43 @@ body.dark .floating-card p {
 }
 .carousel-dots button.active { width: 28px; background: #fff; }
 
+/* =========================================================
+   TARJETAS DE EVENTOS / PROYECTOS
+   ========================================================= */
 .event-card,
 .project-feature {
   overflow: hidden;
   border-radius: var(--radius-xl);
+}
+#eventos .event-card {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  width: 100%;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: minmax(340px, 45%) minmax(0, 55%);
 }
 .event-card img {
   width: 100%;
   height: 230px;
   object-fit: cover;
 }
+#eventos .event-card img {
+  display: block;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
 .card-body { padding: 1.25rem; }
+#eventos .event-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#eventos .event-card .pill {
+  width: fit-content;
+  align-self: flex-start;
+}
 .card-body h3,
 .info-card h3,
 .alliance-card h3,
@@ -553,6 +618,7 @@ body.dark .floating-card p {
 .mini-panels article p {
   color: var(--muted);
 }
+/* Metadatos dentro de tarjetas (listas compactas) */
 .meta-list {
   list-style: none;
   padding: 0;
@@ -562,6 +628,12 @@ body.dark .floating-card p {
   color: var(--muted);
 }
 .meta-list.compact { gap: .4rem; font-size: .95rem; }
+.event-register {
+  margin-top: 1.1rem;
+}
+/* =========================================================
+   TARJETAS DE ALIANZAS
+   ========================================================= */
 .alliance-card {
   display: flex;
   min-height: 260px;
@@ -603,27 +675,91 @@ body.dark .floating-card p {
   stroke: currentColor;
   stroke-width: 1.8;
 }
+/* Caja de historia / hitos */
 .history-box {
+  grid-column: 1 / -1;
   margin-top: 1.5rem;
   border-radius: var(--radius-xl);
   padding: 1.25rem;
+  display: block;
+}
+.history-toggle {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
+  text-align: left;
 }
-.history-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .7rem;
+.history-toggle-copy {
+  display: grid;
+  gap: .8rem;
 }
-.history-tags span {
-  padding: .65rem .85rem;
+.history-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.history-description {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.history-arrow {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--primary) 9%, transparent);
-  color: var(--text);
+  display: inline-grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: transform .3s ease, background .2s ease, color .2s ease;
+}
+.history-toggle:hover .history-arrow {
+  background: var(--primary);
+  color: #fff;
+}
+.history-box.is-open .history-arrow {
+  transform: rotate(180deg);
+}
+.history-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+.history-box.is-open .history-panel {
+  max-height: 680px;
+}
+.past-event-card {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+.past-event-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+.past-event-copy h3 {
+  margin-top: .8rem;
+}
+.past-event-copy p {
+  color: var(--muted);
 }
 
+/* =========================================================
+   BLOQUE DESTACADO DE PROYECTO
+   ========================================================= */
 .project-feature {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -650,6 +786,7 @@ body.dark .floating-card p {
 }
 .project-feature-copy p {
   display: -webkit-box;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
@@ -682,6 +819,9 @@ body.dark .floating-card p {
   margin: .85rem 0 0;
 }
 
+/* =========================================================
+   TARJETAS DE EQUIPO
+   ========================================================= */
 .team-card { text-align: center; }
 .avatar {
   width: 64px;
@@ -695,6 +835,9 @@ body.dark .floating-card p {
   color: var(--primary);
 }
 
+/* =========================================================
+   FORMULARIOS Y PANEL DE CONTACTO
+   ========================================================= */
 .join-form,
 .contact-panel {
   border-radius: var(--radius-xl);
@@ -743,6 +886,9 @@ body.dark .floating-card p {
   border: 1px solid var(--border);
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1.4rem 0 2rem;
@@ -755,6 +901,9 @@ body.dark .floating-card p {
 }
 .back-top { color: var(--primary); font-weight: 700; }
 
+/* =========================================================
+   DECORACION VISUAL DE FONDO
+   ========================================================= */
 .bg-orb {
   position: fixed;
   border-radius: 50%;
@@ -778,6 +927,9 @@ body.dark .floating-card p {
   bottom: 10%;
 }
 
+/* =========================================================
+   ANIMACIONES DE APARICION (scroll reveal)
+   ========================================================= */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -790,6 +942,9 @@ body.dark .floating-card p {
 .reveal-delay-1 { transition-delay: .12s; }
 .reveal-delay-2 { transition-delay: .24s; }
 
+/* =========================================================
+   CTA EN TARJETA PARA FORMULARIO
+   ========================================================= */
 .join-form-card {
   display: block;
   padding: 1.5rem;
@@ -806,13 +961,13 @@ body.dark .floating-card p {
   transition: all 0.25s ease;
 }
 
-/* hover pro */
+/* Hover de elevacion para la tarjeta CTA */
 .join-form-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* efecto suave de fondo */
+/* Capa de brillo/fondo al hacer hover */
 .join-form-card::before {
   content: "";
   position: absolute;
@@ -830,7 +985,7 @@ body.dark .floating-card p {
   opacity: 1;
 }
 
-/* CTA tipo link */
+/* Link interno de llamada a la accion */
 .join-cta {
   display: inline-block;
   margin-top: 1rem;
@@ -843,11 +998,15 @@ body.dark .floating-card p {
   transform: translateX(6px);
 }
 
+/* Animacion vertical suave de la tarjeta flotante */
 @keyframes floatY {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 1050px) {
   .hero-grid,
   .two-col,
@@ -865,6 +1024,18 @@ body.dark .floating-card p {
     grid-template-columns: 1fr;
     min-height: 620px;
     max-height: 620px;
+  }
+  #eventos .event-card {
+    width: 100%;
+    min-height: 0;
+    display: block;
+  }
+  #eventos .event-card img {
+    height: 230px;
+    min-height: 0;
+  }
+  #eventos .event-card .card-body {
+    display: block;
   }
   .project-feature-media {
     height: 300px;
@@ -925,6 +1096,15 @@ body.dark .floating-card p {
   .slide-content { left: 1.2rem; right: 1.2rem; bottom: 1.2rem; }
   .history-box,
   .footer-wrap { flex-direction: column; align-items: flex-start; }
+  .history-toggle {
+    align-items: flex-start;
+  }
+  .past-event-card {
+    grid-template-columns: 1fr;
+  }
+  .past-event-card img {
+    height: 220px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -936,14 +1116,17 @@ body.dark .floating-card p {
   .slide-content h3 { font-size: 1.6rem; }
 }
 
-/* LOGOS */
+/* =========================================================
+   LOGOS Y VISIBILIDAD POR TEMA
+   ========================================================= */
+/* Imagen del logo en navbar */
 .brand img{
   width: 40px;
   height: 40px;
   object-fit: contain;
 }
 
-/* Modo día por defecto */
+/* Modo dia por defecto */
 .logo-dark{
   display: none;
 }

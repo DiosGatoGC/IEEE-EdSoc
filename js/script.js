@@ -4,6 +4,8 @@ const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('nav');
 const joinForm = document.getElementById('joinForm');
 const formMessage = document.getElementById('formMessage');
+const historyBox = document.querySelector('.history-box');
+const historyToggle = document.querySelector('.history-toggle');
 
 const savedTheme = localStorage.getItem('ieeeedsoc-theme');
 if (savedTheme === 'dark') body.classList.add('dark');
@@ -22,6 +24,13 @@ document.querySelectorAll('.nav a').forEach(link => {
   link.addEventListener('click', () => nav.classList.remove('open'));
 });
 
+if (historyBox && historyToggle) {
+  historyToggle.addEventListener('click', () => {
+    const isOpen = historyBox.classList.toggle('is-open');
+    historyToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
+
 const projects = [
   {
     id: 'landing-page',
@@ -34,11 +43,11 @@ const projects = [
     focus: 'Centro de informaci\u00f3n y convocatoria de nuevos miembros',
     use: 'Estudiantes interesados y miembros',
     label: 'Web \u00b7 Comunicaci\u00f3n',
-    progress: 65
+    progress: 95
   },
   {
     id: 'impresion-3d',
-    image: 'https://electrodomesticos10.top/imagenes/las-10-mejores-impresoras-3d.jpg',
+    image: 'https://cursos-sepe.net/wp-content/uploads/2024/07/curso-modelado-impresion-3d.jpg',
     imageAlt: 'Taller de impresi\u00f3n 3D',
     badge: 'Proyecto destacado',
     title: 'Taller de impresi\u00f3n 3D',
@@ -47,7 +56,7 @@ const projects = [
     focus: 'Aprendizaje pr\u00e1ctico con prototipos funcionales',
     use: 'Talleres, demostraciones y proyectos acad\u00e9micos',
     label: 'Impresi\u00f3n 3D \u00b7 Taller',
-    progress: 50
+    progress: 100
   },
   {
     id: 'brazo-robotico',
@@ -60,7 +69,7 @@ const projects = [
     focus: 'Rob\u00f3tica educativa, control y validaci\u00f3n de movimiento',
     use: 'Pr\u00e1cticas de laboratorio y presentaciones t\u00e9cnicas',
     label: 'Rob\u00f3tica \u00b7 Desarrollo',
-    progress: 50
+    progress: 30
   }
 ];
 
@@ -108,7 +117,7 @@ function renderProjectCards() {
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <span class="small-label">${project.label}</span>
-        ${createProgressBar(50)}
+        ${createProgressBar(project.progress)}
       </article>
     `)
     .join('');
