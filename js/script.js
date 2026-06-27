@@ -271,19 +271,6 @@ const projects = [
     use: 'Talleres, demostraciones y proyectos acad\u00e9micos',
     label: 'Impresi\u00f3n 3D \u00b7 Taller',
     progress: 100
-  },
-  {
-    id: 'brazo-robotico',
-    image: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Brazo rob\u00f3tico',
-    badge: 'Proyecto destacado',
-    title: 'Brazo rob\u00f3tico',
-    description: 'Creaci\u00f3n de un brazo rob\u00f3tico como proyecto en desarrollo, pendiente de definir con mayor precisi\u00f3n la acci\u00f3n espec\u00edfica que realizar\u00e1.',
-    objective: 'Desarrollar una base experimental para automatizaci\u00f3n',
-    focus: 'Rob\u00f3tica educativa, control y validaci\u00f3n de movimiento',
-    use: 'Pr\u00e1cticas de laboratorio y presentaciones t\u00e9cnicas',
-    label: 'Rob\u00f3tica \u00b7 Desarrollo',
-    progress: 30
   }
 ];
 
